@@ -43,9 +43,9 @@ describe('User', () => {
      it('get a user by username', (done) => {
 
       const user = {
-        username: 'nashe',
-        firstname: 'Tinashe',
-        lastname: 'Makuti'
+        username: 'abiola',
+        firstname: 'Habib',
+        lastname: 'Aminu'
       }
       userController.create(user, (err, result) => {
         expect(err).to.be.equal(null)
@@ -54,7 +54,7 @@ describe('User', () => {
 
       userController.get(user.username,(err, res) => {
         expect(err).to.be.equal(null)
-        expect(res.firstname).to.be.equal('Tinashe')
+        expect(res.firstname).to.be.equal('Habib')
         done()
       })
   })
